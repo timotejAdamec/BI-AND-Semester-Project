@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#0000FF</color>
+    <color name="nearly_white">#F4F4F9</color>
+    <color name="lighter_grey">#F0F0F0</color>
+    <color name="light_grey">#B3B3B3</color>
+    <color name="grey">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+
+    <color name="headline_text">@color/white</color>
+    <color name="subtitle_text">@color/grey</color>
+    <color name="separator">@color/lighter_grey</color>
+    <color name="bottom_navigation_active">@color/white</color>
+    <color name="bottom_navigation_inactive">@color/light_grey</color>
+</resources>

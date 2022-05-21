@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpaceX Crew</string>
+    <string name="crew">Crew</string>
+    <string name="spacex">SpaceX</string>
+</resources>

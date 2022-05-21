@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/crew_fragment"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="@string/crew" />
+
+    <item
+        android:id="@id/company_fragment"
+        android:icon="@drawable/ic_baseline_apartment_24"
+        android:title="@string/spacex" />
+</menu>

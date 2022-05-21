@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General-->
+    <dimen name="small_space">8dp</dimen>
+    <dimen name="medium_space">16dp</dimen>
+    <dimen name="large_space">24dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="bottom_navigation_radius">10dp</dimen>
+
+    <!-- Fonts-->
+    <dimen name="headline1">20sp</dimen>
+    <dimen name="headline2">16sp</dimen>
+    <dimen name="subtitle1">14sp</dimen>
+    <dimen name="subtitle2">12sp</dimen>
+
+    <!-- Crew Member list item-->
+    <dimen name="list_item_avatar">44dp</dimen>
+    <dimen name="list_item_avatar_radius">8dp</dimen>
+    <dimen name="list_item_margin_vertical">4dp</dimen>
+
+    <!-- Crew Member detail-->
+    <dimen name="detail_avatar">140dp</dimen>
+    <dimen name="detail_name_margin_top">14dp</dimen>
+</resources>
