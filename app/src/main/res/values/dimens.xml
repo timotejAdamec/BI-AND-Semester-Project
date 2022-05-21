@@ -9,6 +9,7 @@
     <dimen name="divider">1dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
     <dimen name="bottom_navigation_radius">10dp</dimen>
+    <dimen name="outline">2dp</dimen>
 
     <!-- Fonts-->
     <dimen name="headline1">20sp</dimen>
@@ -19,7 +20,7 @@
     <!-- Crew Member list item-->
     <dimen name="list_item_avatar">44dp</dimen>
     <dimen name="list_item_avatar_radius">8dp</dimen>
-    <dimen name="list_item_margin_vertical">4dp</dimen>
+    <dimen name="list_item_margin_vertical">8dp</dimen>
 
     <!-- Crew Member detail-->
     <dimen name="detail_avatar">140dp</dimen>

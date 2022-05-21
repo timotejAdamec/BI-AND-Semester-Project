@@ -14,4 +14,5 @@
     <color name="separator">@color/lighter_grey</color>
     <color name="bottom_navigation_active">@color/white</color>
     <color name="bottom_navigation_inactive">@color/light_grey</color>
+    <color name="card_outline">@color/white</color>
 </resources>

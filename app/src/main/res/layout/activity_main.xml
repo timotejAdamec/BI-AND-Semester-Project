@@ -21,9 +21,8 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        style="@style/Widget.Homework1.BottomNavigation"
+        style="@style/Widget.SpaceXCrew.BottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_bottom_navigation"
         app:menu="@menu/bottom_navigation" />
 </LinearLayout>

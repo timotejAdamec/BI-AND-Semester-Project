@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.SpaceXCrew.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="strokeColor">@color/cardview_light_background</item>
+        <item name="strokeWidth">@dimen/small_space</item>
+        <item name="android:outlineSpotShadowColor">@color/cardview_light_background</item>
+        <item name="android:outlineAmbientShadowColor">@color/cardview_light_background</item>
+    </style>
+</resources>

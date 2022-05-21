@@ -31,11 +31,19 @@
     </style>
 
     <style name="Widget.SpaceXCrew.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="android:background">?android:colorBackground</item>
+        <item name="android:background">@drawable/bg_bottom_navigation</item>
         <item name="itemTextAppearanceActive">@style/TextAppearance.SpaceXCrew.Subtitle2</item>
         <item name="itemTextAppearanceInactive">@style/TextAppearance.SpaceXCrew.Subtitle2</item>
         <item name="itemIconTint">@color/bottom_navigation_item</item>
         <item name="itemTextColor">@color/bottom_navigation_item</item>
+    </style>
+
+    <style name="Widget.SpaceXCrew.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="strokeColor">@color/cardview_light_background</item>
+        <item name="strokeWidth">@dimen/small_space</item>
     </style>
 
     <style name="TextAppearance.SpaceXCrew.Headline1" parent="TextAppearance.MaterialComponents.Headline1">

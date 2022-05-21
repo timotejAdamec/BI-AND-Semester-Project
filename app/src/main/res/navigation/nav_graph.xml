@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/crew_fragment">
+
+    <fragment
+        android:id="@+id/crew_fragment"
+        android:name="cz.cvut.fit.adametim.spacex_crew.features.crew.presentation.CrewFragment"
+        android:label="@string/crew">
+    </fragment>
+
+    <fragment
+        android:id="@+id/company_fragment"
+        android:name="cz.cvut.fit.adametim.spacex_crew.features.company.presentation.CompanyFragment"
+        android:label="@string/spacex">
+    </fragment>
+
+</navigation>

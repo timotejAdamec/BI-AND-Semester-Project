@@ -2,4 +2,5 @@
     <string name="app_name">SpaceX Crew</string>
     <string name="crew">Crew</string>
     <string name="spacex">SpaceX</string>
+    <string name="crew_error_loading_msg">Error loading the crew</string>
 </resources>

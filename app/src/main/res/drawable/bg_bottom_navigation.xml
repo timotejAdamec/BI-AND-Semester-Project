@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners
-        android:topLeftRadius="@dimen/bottom_navigation_radius"
-        android:topRightRadius="@dimen/bottom_navigation_radius" />
-    <solid android:color="?colorSurface" />
-</shape>
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners
+                android:topLeftRadius="@dimen/bottom_navigation_radius"
+                android:topRightRadius="@dimen/bottom_navigation_radius" />
+            <solid android:color="?android:colorBackground" />
+            <stroke
+                android:width="@dimen/outline"
+                android:color="@color/card_outline" />
+            <padding
+                android:bottom="0dip"
+                android:left="0dip"
+                android:right="0dip"
+                android:top="0dip"
+                />
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/outline"
+        android:right="@dimen/outline"
+        android:top="@dimen/outline">
+        <shape>
+            <corners
+                android:topLeftRadius="@dimen/bottom_navigation_radius"
+                android:topRightRadius="@dimen/bottom_navigation_radius" />
+            <solid android:color="?android:colorBackground" />
+        </shape>
+    </item>
+</layer-list>
+
+
+
+
+
