@@ -3,4 +3,5 @@
     <string name="crew">Crew</string>
     <string name="spacex">SpaceX</string>
     <string name="crew_error_loading_msg">Error loading the crew</string>
+    <string name="crew_member_name_placeholder">DeMarcus Cousins the 3rd</string>
 </resources>

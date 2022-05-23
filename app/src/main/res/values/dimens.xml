@@ -17,12 +17,6 @@
     <dimen name="subtitle1">14sp</dimen>
     <dimen name="subtitle2">12sp</dimen>
 
-    <!-- Crew Member list item-->
-    <dimen name="list_item_avatar">44dp</dimen>
-    <dimen name="list_item_avatar_radius">8dp</dimen>
-    <dimen name="list_item_margin_vertical">8dp</dimen>
-
     <!-- Crew Member detail-->
     <dimen name="detail_avatar">140dp</dimen>
-    <dimen name="detail_name_margin_top">14dp</dimen>
 </resources>
