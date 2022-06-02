@@ -19,4 +19,5 @@
 
     <!-- Crew Member detail-->
     <dimen name="detail_avatar">140dp</dimen>
+    <dimen name="list_item_avatar_radius">5dp</dimen>
 </resources>
