@@ -5,6 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface CrewDatabaseDataSource {
     fun getCrewStream(): Flow<List<CrewMember>>
-    fun getCrewMemberStream(id: Int): Flow<CrewMember>
+    fun getCrewMemberStream(id: String): Flow<CrewMember>
     suspend fun synchronizeCrew(crew: List<CrewMember>)
 }

@@ -12,7 +12,7 @@ class CrewRepository(
         return crewDatabaseDataSource.getCrewStream()
     }
 
-    fun getCrewMemberStream(id: Int): Flow<CrewMember> {
+    fun getCrewMemberStream(id: String): Flow<CrewMember> {
         return crewDatabaseDataSource.getCrewMemberStream(id)
     }
 
