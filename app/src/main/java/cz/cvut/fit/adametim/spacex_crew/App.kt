@@ -1,4 +1,18 @@
 package cz.cvut.fit.adametim.spacex_crew
 
-class App {
+import android.app.Application
+import cz.cvut.fit.adametim.spacex_crew.features.crew.di.crewModule
+import cz.cvut.fit.adametim.spacex_crew.shared.di.sharedModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
+
+class App : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        startKoin {
+            androidContext(this@App)
+            modules(sharedModule + crewModule)
+        }
+    }
 }

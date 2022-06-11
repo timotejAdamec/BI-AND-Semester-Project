@@ -24,7 +24,7 @@ class CrewRoomDataSource(
         }
     }
 
-    override fun getCrewMemberStream(id: Int): Flow<CrewMember> {
+    override fun getCrewMemberStream(id: String): Flow<CrewMember> {
         return crewDao.getCrewMemberStream(id).map { databaseCrewMember ->
             CrewMember(
                 id = databaseCrewMember.id,

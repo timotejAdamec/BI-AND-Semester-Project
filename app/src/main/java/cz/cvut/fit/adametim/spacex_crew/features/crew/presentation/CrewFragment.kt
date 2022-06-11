@@ -2,13 +2,10 @@ package cz.cvut.fit.adametim.spacex_crew.features.crew.presentation
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import cz.cvut.fit.adametim.spacex_crew.R
 import cz.cvut.fit.adametim.spacex_crew.databinding.FragmentCrewBinding
@@ -21,12 +18,11 @@ class CrewFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val adapter = CrewAdapter()
-    // TODO
-    //private val viewModel by viewModel<CrewMemberViewModel>()
+    private val viewModel by viewModel<CrewViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -47,14 +43,13 @@ class CrewFragment : Fragment() {
         //pagerCrewMembers.layoutManager = LinearLayoutManager(context)
         pagerCrewMembers.adapter = adapter
 
-        // TODO
-        /*viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.charactersStateStream.collect { state ->
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.crewStateStream.collect { state ->
                 progressBar.isVisible = state is CrewState.Loading
                 when (state) {
                     is CrewState.Loading -> {}
                     is CrewState.Loaded -> {
-                        adapter.submitList(state.characters)
+                        adapter.submitList(state.crew)
                         pagerCrewMembers.setCurrentItem(5, false)
                         pagerCrewMembers.setCurrentItem(0, true)
                     }
@@ -69,6 +64,11 @@ class CrewFragment : Fragment() {
                     }
                 }
             }
-        }*/
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -13,7 +13,7 @@ abstract class CrewDao {
     abstract fun getCrewStream(): Flow<List<DatabaseCrewMember>>
 
     @Query("SELECT * FROM crew WHERE id IS :id")
-    abstract fun getCrewMemberStream(id: Int): Flow<DatabaseCrewMember>
+    abstract fun getCrewMemberStream(id: String): Flow<DatabaseCrewMember>
 
     @Transaction
     open suspend fun synchronizeCrew(characters: List<DatabaseCrewMember>) {

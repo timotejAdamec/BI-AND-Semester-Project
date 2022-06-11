@@ -1,5 +1,6 @@
 package cz.cvut.fit.adametim.spacex_crew.features.crew.presentation
 
+import android.view.LayoutInflater
 import androidx.recyclerview.widget.DiffUtil
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -8,37 +9,42 @@ import com.bumptech.glide.Glide
 import cz.cvut.fit.adametim.spacex_crew.databinding.CrewMemberItemBinding
 import cz.cvut.fit.adametim.spacex_crew.features.crew.domain.CrewMember
 
-class CrewAdapter()
-    : ListAdapter<CrewMember, CrewAdapter.CrewMemberHolder>(CrewDiffCallback()) {
+class CrewAdapter() : ListAdapter<CrewMember, CrewAdapter.CrewMemberHolder>(CrewDiffCallback()) {
 
     /*init {
-            stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
-        }*/
+        stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
+    }*/
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CrewAdapter.CrewMemberHolder {
-        TODO("Not yet implemented")
+    ): CrewMemberHolder {
+        val binding = CrewMemberItemBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return CrewMemberHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CrewAdapter.CrewMemberHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: CrewMemberHolder, position: Int) {
+        val crewMember = getItem(position)
+        holder.bind(crewMember)
     }
 
-    class CrewMemberHolder(private val binding: CrewMemberItemBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    class CrewMemberHolder(private val binding: CrewMemberItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(crewMember: CrewMember) {
-            TODO("Not yet implemented")
-            /*binding.txtName.text = crewMember.name
-            binding.txtStatus.text = crewMember.status
+            binding.txtName.text = crewMember.name
+            /*binding.txtStatus.text = crewMember.status
             binding.txtAgency.text = crewMember.agency
             binding.txtWikipedia.text = crewMember.wikipedia
-            binding.txtNumberOfLaunches.text = crewMember.numberOfLaunches
+            binding.txtNumberOfLaunches.text = crewMember.numberOfLaunches*/
             Glide.with(binding.root)
                 .load(crewMember.imageUrl)
-                .into(binding.imgAvatar)*/
+                .into(binding.imgAvatar)
+            TODO("Not yet implemented fully")
         }
     }
 
