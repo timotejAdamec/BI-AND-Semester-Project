@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "crew")
 data class DatabaseCrewMember(
-    @PrimaryKey val id: Int,
+    @PrimaryKey val id: String,
     val name: String,
     val agency: String,
     val wikipedia: String,
