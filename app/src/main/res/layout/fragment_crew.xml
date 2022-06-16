@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingVertical="@dimen/large_space"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

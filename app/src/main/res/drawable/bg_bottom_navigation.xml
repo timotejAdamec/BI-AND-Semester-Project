@@ -10,7 +10,7 @@
             <solid android:color="?android:colorBackground" />
             <stroke
                 android:width="@dimen/outline"
-                android:color="@color/card_outline" />
+                android:color="@color/primary_color" />
             <padding
                 android:bottom="0dip"
                 android:left="0dip"

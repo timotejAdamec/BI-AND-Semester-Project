@@ -1,5 +1,6 @@
 package cz.cvut.fit.adametim.spacex_crew.features.crew.presentation
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.DiffUtil
 import android.view.ViewGroup
@@ -37,14 +38,17 @@ class CrewAdapter() : ListAdapter<CrewMember, CrewAdapter.CrewMemberHolder>(Crew
 
         fun bind(crewMember: CrewMember) {
             binding.txtName.text = crewMember.name
-            /*binding.txtStatus.text = crewMember.status
+            binding.txtStatus.text = crewMember.status
+            if (binding.txtStatus.text.isNotEmpty()) {
+                binding.txtStatus.text = binding.txtStatus.text[0].uppercaseChar()
+                    .toString() + binding.txtStatus.text.substring(1, binding.txtStatus.text.length)
+            }
             binding.txtAgency.text = crewMember.agency
             binding.txtWikipedia.text = crewMember.wikipedia
-            binding.txtNumberOfLaunches.text = crewMember.numberOfLaunches*/
+            binding.txtNumberOfLaunches.text = crewMember.numberOfLaunches.toString()
             Glide.with(binding.root)
                 .load(crewMember.imageUrl)
                 .into(binding.imgAvatar)
-            TODO("Not yet implemented fully")
         }
     }
 

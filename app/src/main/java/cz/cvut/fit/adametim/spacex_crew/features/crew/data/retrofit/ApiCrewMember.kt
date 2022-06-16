@@ -1,6 +1,5 @@
 package cz.cvut.fit.adametim.spacex_crew.features.crew.data.retrofit
 
-import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
@@ -10,6 +9,6 @@ data class ApiCrewMember(
     val status: String,
     val agency: String,
     val wikipedia: String,
-    val launches: List<String>,
+    //val launches: List<String>,
     val image: String
 )

@@ -4,5 +4,5 @@ import retrofit2.http.GET
 
 interface CrewApiDescription {
     @GET("crew")
-    suspend fun fetchCrew(): CrewResponse
+    suspend fun fetchCrew(): List<ApiCrewMember>
 }

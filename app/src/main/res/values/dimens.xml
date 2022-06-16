@@ -4,7 +4,8 @@
     <dimen name="small_space">8dp</dimen>
     <dimen name="medium_space">16dp</dimen>
     <dimen name="large_space">24dp</dimen>
-    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="extra_large_space">32dp</dimen>
+    <dimen name="card_elevation">10dp</dimen>
     <dimen name="card_radius">16dp</dimen>
     <dimen name="divider">1dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
@@ -14,10 +15,13 @@
     <!-- Fonts-->
     <dimen name="headline1">20sp</dimen>
     <dimen name="headline2">16sp</dimen>
+    <dimen name="headline3">13sp</dimen>
     <dimen name="subtitle1">14sp</dimen>
     <dimen name="subtitle2">12sp</dimen>
+    <dimen name="body1">12sp</dimen>
+    <dimen name="body2">10sp</dimen>
 
     <!-- Crew Member detail-->
-    <dimen name="detail_avatar">140dp</dimen>
-    <dimen name="list_item_avatar_radius">5dp</dimen>
+    <dimen name="detail_avatar">200dp</dimen>
+    <dimen name="list_item_avatar_radius">10dp</dimen>
 </resources>

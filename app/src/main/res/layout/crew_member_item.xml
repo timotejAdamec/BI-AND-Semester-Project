@@ -5,12 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/large_space"
+    android:layout_marginStart="@dimen/large_space"
+    android:layout_marginEnd="@dimen/large_space"
+    android:layout_marginTop="@dimen/small_space"
+    android:layout_marginBottom="@dimen/large_space"
     style="@style/Widget.SpaceXCrew.CardView">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingTop="@dimen/medium_space"
         android:paddingBottom="@dimen/large_space">
 
@@ -24,25 +27,130 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="DeMarcus Cousins the 3rd" />
+            tools:text="@string/dummy_name" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/img_avatar"
             android:layout_width="@dimen/detail_avatar"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_space"
+            android:padding="@dimen/outline"
+            app:strokeWidth="@dimen/outline"
+            app:strokeColor="@color/primary_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_name"
             app:shapeAppearance="@style/ShapeAppearance.SpaceXCrew.Avatar"
             tools:background="@color/black" />
 
-        <TextView
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/crew_member_description_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_large_space"
+            android:layout_marginStart="@dimen/large_space"
+            android:layout_marginEnd="@dimen/large_space"
+            app:dividerColor="@color/primary_color"
+            app:layout_constraintTop_toBottomOf="@id/img_avatar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/img_avatar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="180dp" />
+
+        <TextView
+            android:id="@+id/agency_subtitle"
+            style="@style/TextAppearance.SpaceXCrew.Headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_space"
+            android:text="@string/agency"
+            app:layout_constraintEnd_toStartOf="@+id/number_of_launches"
+            app:layout_constraintStart_toStartOf="@id/crew_member_description_divider"
+            app:layout_constraintTop_toBottomOf="@id/crew_member_description_divider" />
+
+        <TextView
+            android:id="@+id/txt_agency"
+            style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            app:layout_constraintEnd_toStartOf="@+id/number_of_launches"
+            app:layout_constraintStart_toStartOf="@id/crew_member_description_divider"
+            app:layout_constraintTop_toBottomOf="@id/agency_subtitle"
+            tools:text="@string/nasa" />
+
+        <TextView
+            android:id="@+id/number_of_launches"
+            style="@style/TextAppearance.SpaceXCrew.Headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_space"
+            android:text="@string/launches"
+            app:layout_constraintTop_toBottomOf="@id/crew_member_description_divider"
+            app:layout_constraintStart_toStartOf="@id/center_guideline"
+            app:layout_constraintEnd_toEndOf="@id/center_guideline" />
+
+        <TextView
+            android:id="@+id/txt_number_of_launches"
+            style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            app:layout_constraintTop_toBottomOf="@id/number_of_launches"
+            app:layout_constraintStart_toStartOf="@id/center_guideline"
+            app:layout_constraintEnd_toEndOf="@id/center_guideline"
+            tools:text="@string/_5"/>
+
+        <TextView
+            android:id="@+id/status_subtitle"
+            style="@style/TextAppearance.SpaceXCrew.Headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            app:layout_constraintEnd_toEndOf="@id/crew_member_description_divider"
+            app:layout_constraintStart_toEndOf="@+id/number_of_launches"
+            app:layout_constraintTop_toTopOf="@id/agency_subtitle" />
+
+        <TextView
+            android:id="@+id/txt_status"
+            style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            app:layout_constraintEnd_toEndOf="@id/crew_member_description_divider"
+            app:layout_constraintStart_toEndOf="@+id/number_of_launches"
+            app:layout_constraintTop_toBottomOf="@id/status_subtitle"
+            tools:text="@string/alive" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/wikipedia_icon"
+            android:layout_width="@dimen/large_space"
+            android:layout_height="@dimen/large_space"
+            android:src="@drawable/wikipedia_w"
+            android:background="@color/white"
+            app:contentPadding="2dp"
+            app:contentPaddingTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/crew_member_description_divider"
+            app:shapeAppearance="@style/ShapeAppearance.SpaceXCrew.Avatar"
+            />
+
+        <TextView
+            android:id="@+id/txt_wikipedia"
+            style="@style/TextAppearance.SpaceXCrew.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/small_space"
+            android:gravity="start"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/wikipedia_icon"
+            app:layout_constraintEnd_toEndOf="@id/crew_member_description_divider"
+            app:layout_constraintStart_toEndOf="@+id/wikipedia_icon"
+            app:layout_constraintTop_toTopOf="@id/wikipedia_icon"
+            tools:text="@string/dummy_wikipedia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.SpaceXCrew" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="colorSecondary">@color/blue</item>
-        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color</item>
+        <item name="colorSecondary">@color/subtle_primary_color</item>
+        <item name="colorSecondaryVariant">@color/subtle_primary_color</item>
         <item name="android:colorBackground">@color/black</item>
         <item name="colorSurface">@color/white</item>
         <item name="colorError">@color/red</item>
@@ -20,8 +20,10 @@
 
         <item name="textAppearanceHeadline1">@style/TextAppearance.SpaceXCrew.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.SpaceXCrew.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.SpaceXCrew.Headline3</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.SpaceXCrew.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.SpaceXCrew.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.SpaceXCrew.Body1</item>
     </style>
 
     <style name="Widget.SpaceXCrew.Toolbar" parent="Widget.MaterialComponents.Toolbar">
@@ -39,39 +41,60 @@
     </style>
 
     <style name="Widget.SpaceXCrew.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="android:background">?android:colorBackground</item>
+        <item name="cardBackgroundColor">@color/card_background_color</item>
         <item name="cardElevation">@dimen/card_elevation</item>
         <item name="cardCornerRadius">@dimen/card_radius</item>
         <item name="strokeColor">@color/cardview_light_background</item>
-        <item name="strokeWidth">@dimen/small_space</item>
+        <item name="strokeWidth">@dimen/outline</item>
     </style>
 
     <style name="TextAppearance.SpaceXCrew.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/headline1</item>
-        <item name="android:textColor">@color/headline_text</item>
+        <item name="android:textColor">@color/primary_color</item>
     </style>
 
     <style name="TextAppearance.SpaceXCrew.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/headline2</item>
-        <item name="android:textColor">@color/headline_text</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="TextAppearance.SpaceXCrew.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">@dimen/headline3</item>
+        <item name="android:textColor">@color/subtle_primary_color</item>
     </style>
 
     <style name="TextAppearance.SpaceXCrew.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="fontFamily">@font/poppins_light</item>
         <item name="android:textSize">@dimen/subtitle1</item>
-        <item name="android:textColor">@color/subtitle_text</item>
+        <item name="android:textColor">@color/primary_color</item>
     </style>
 
-    <style name="TextAppearance.SpaceXCrew.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+    <style name="TextAppearance.SpaceXCrew.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="fontFamily">@font/poppins_light</item>
         <item name="android:textSize">@dimen/subtitle2</item>
-        <item name="android:textColor">@color/subtitle_text</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="TextAppearance.SpaceXCrew.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">@dimen/body1</item>
+        <item name="android:textColor">@color/subtle_primary_color</item>
+    </style>
+
+    <style name="TextAppearance.SpaceXCrew.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">@dimen/body2</item>
+        <item name="android:textColor">@color/subtle_primary_color</item>
     </style>
 
     <style name="ShapeAppearance.SpaceXCrew.Avatar" parent="ShapeAppearance.MaterialComponents.MediumComponent">

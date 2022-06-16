@@ -4,4 +4,12 @@
     <string name="spacex">SpaceX</string>
     <string name="crew_error_loading_msg">Error loading the crew</string>
     <string name="crew_member_name_placeholder">DeMarcus Cousins the 3rd</string>
+    <string name="agency">Agency</string>
+    <string name="dummy_name">DeMarcus Cousins the 3rd</string>
+    <string name="status">Status</string>
+    <string name="dummy_wikipedia">https://en.wikipedia.org/wiki/demarcus_cousins_the_3rd_blablablabla</string>
+    <string name="launches">Launches</string>
+    <string name="_5">5</string>
+    <string name="alive">Alive</string>
+    <string name="nasa">NASA</string>
 </resources>

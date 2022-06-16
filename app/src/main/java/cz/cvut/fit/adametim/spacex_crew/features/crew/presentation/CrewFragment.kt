@@ -50,7 +50,7 @@ class CrewFragment : Fragment() {
                     is CrewState.Loading -> {}
                     is CrewState.Loaded -> {
                         adapter.submitList(state.crew)
-                        pagerCrewMembers.setCurrentItem(5, false)
+                        pagerCrewMembers.setCurrentItem(3, false)
                         pagerCrewMembers.setCurrentItem(0, true)
                     }
                     is CrewState.Error -> {
@@ -60,7 +60,7 @@ class CrewFragment : Fragment() {
                             Snackbar.LENGTH_SHORT)
                             .show()
                         Log.e(this.javaClass.simpleName,
-                            "Error loading resources", state.throwable)
+                            "Error loading resources = " + state.throwable.message, state.throwable)
                     }
                 }
             }
