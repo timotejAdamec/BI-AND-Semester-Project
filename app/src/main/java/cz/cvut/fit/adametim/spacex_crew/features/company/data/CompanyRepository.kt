@@ -11,8 +11,8 @@ class CompanyRepository(
     private val companyRemoteDataSource: CompanyRemoteDataSource
 ) {
 
-    fun getCompanyStream(id: String): Flow<Company> {
-        return companyDatabaseDataSource.getCompanyStream(id = id)
+    fun getCompanyStream(): Flow<Company> {
+        return companyDatabaseDataSource.getCompanyStream()
     }
 
     suspend fun fetchCompany() {

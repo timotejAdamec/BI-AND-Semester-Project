@@ -9,8 +9,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 abstract class CompanyDao {
-    @Query("SELECT * FROM company WHERE id IS :id")
-    abstract fun getCompanyStream(id: String): Flow<DatabaseCompany>
+    @Query("SELECT * FROM company")
+    abstract fun getCompanyStream(): Flow<DatabaseCompany>
 
     @Transaction
     open suspend fun synchronizeCompany(company: DatabaseCompany) {
