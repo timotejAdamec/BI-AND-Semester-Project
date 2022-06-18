@@ -6,33 +6,33 @@ import com.squareup.moshi.JsonClass
 data class ApiCompany(
     val headquarters: ApiHeadquarters,
     val links: ApiLinks,
-    val name: String,
-    val founder: String,
-    val founded: Int,
-    val employees: Int,
-    val vehicles: Int,
-    val launch_sites: Int,
-    val test_sites: Int,
-    val ceo: String,
-    val cto: String,
-    val coo: String,
-    val cto_propulsion: String,
-    val valuation: Long,
-    val summary: String,
-    val id: String
+    val name: String = "",
+    val founder: String = "",
+    val founded: Int = 0,
+    val employees: Int = 0,
+    val vehicles: Int = 0,
+    val launch_sites: Int = 0,
+    val test_sites: Int = 0,
+    val ceo: String = "",
+    val cto: String = "",
+    val coo: String = "",
+    val cto_propulsion: String = "",
+    val valuation: Long = 0,
+    val summary: String = "",
+    val id: String = ""
 )
 
 @JsonClass(generateAdapter = true)
 data class ApiHeadquarters(
-    val address: String,
-    val city: String,
-    val state: String
+    val address: String = "",
+    val city: String = "",
+    val state: String = ""
 )
 
 @JsonClass(generateAdapter = true)
 data class ApiLinks(
-    val website: String,
-    val flickr: String,
-    val twitter: String,
-    val elon_twitter: String
+    val website: String = "",
+    val flickr: String = "",
+    val twitter: String = "",
+    val elon_twitter: String = ""
 )
