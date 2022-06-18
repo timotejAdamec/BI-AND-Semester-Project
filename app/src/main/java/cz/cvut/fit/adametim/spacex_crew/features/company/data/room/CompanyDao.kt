@@ -4,12 +4,11 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
-import cz.cvut.fit.adametim.spacex_crew.features.crew.data.room.DatabaseCrewMember
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 abstract class CompanyDao {
-    @Query("SELECT * FROM company")
+    @Query("SELECT * FROM company ORDER BY id DESC LIMIT 1")
     abstract fun getCompanyStream(): Flow<DatabaseCompany>
 
     @Transaction

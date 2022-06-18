@@ -4,6 +4,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class ApiCompany(
+    val id: String,
     val headquarters: ApiHeadquarters,
     val links: ApiLinks,
     val name: String = "",
@@ -18,8 +19,7 @@ data class ApiCompany(
     val coo: String = "",
     val cto_propulsion: String = "",
     val valuation: Long = 0,
-    val summary: String = "",
-    val id: String = ""
+    val summary: String = ""
 )
 
 @JsonClass(generateAdapter = true)

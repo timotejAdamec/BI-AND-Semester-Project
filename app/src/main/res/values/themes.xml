@@ -41,7 +41,7 @@
     </style>
 
     <style name="Widget.SpaceXCrew.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">@color/card_background_color</item>
+        <item name="cardBackgroundColor">@color/background_color</item>
         <item name="cardElevation">@dimen/card_elevation</item>
         <item name="cardCornerRadius">@dimen/card_radius</item>
         <item name="strokeColor">@color/cardview_light_background</item>
@@ -100,5 +100,13 @@
     <style name="ShapeAppearance.SpaceXCrew.Avatar" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/list_item_avatar_radius</item>
+    </style>
+
+    <style name="Widget.SpaceXCrew.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundColor">@color/background_color</item>
+        <item name="android:paddingTop">@dimen/medium_space</item>
+        <item name="android:paddingBottom">@dimen/medium_space</item>
+        <item name="strokeColor">@color/cardview_light_background</item>
+        <item name="strokeWidth">@dimen/outline</item>
     </style>
 </resources>

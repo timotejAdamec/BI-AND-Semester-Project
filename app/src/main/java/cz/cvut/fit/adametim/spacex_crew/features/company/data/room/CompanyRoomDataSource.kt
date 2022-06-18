@@ -12,6 +12,7 @@ class CompanyRoomDataSource(
     override fun getCompanyStream(): Flow<Company> {
         return companyDao.getCompanyStream().map { databaseCompany ->
             Company(
+                id = databaseCompany.id,
                 hqAddress = databaseCompany.hqAddress,
                 hqCity = databaseCompany.hqCity,
                 hqState = databaseCompany.hqState,
@@ -30,6 +31,7 @@ class CompanyRoomDataSource(
 
     override suspend fun synchronizeCompany(company: Company) {
         companyDao.synchronizeCompany(DatabaseCompany(
+            id = company.id,
             hqAddress = company.hqAddress,
             hqCity = company.hqCity,
             hqState = company.hqState,

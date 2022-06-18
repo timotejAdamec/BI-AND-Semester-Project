@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Widget.SpaceXCrew.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">@color/card_background_color</item>
+        <item name="cardBackgroundColor">@color/background_color</item>
         <item name="cardCornerRadius">@dimen/card_radius</item>
         <item name="strokeColor">@color/cardview_light_background</item>
         <item name="strokeWidth">@dimen/outline</item>

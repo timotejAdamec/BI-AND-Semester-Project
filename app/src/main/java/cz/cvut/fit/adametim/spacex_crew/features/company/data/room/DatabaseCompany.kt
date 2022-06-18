@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "company")
 data class DatabaseCompany(
+    @PrimaryKey val id: String,
     val hqAddress: String,
     val hqCity: String,
     val hqState: String,
