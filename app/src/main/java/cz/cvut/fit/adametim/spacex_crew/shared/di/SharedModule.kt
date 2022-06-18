@@ -17,7 +17,8 @@ val sharedModule = module {
     }
 
     single {
-        Room.databaseBuilder(androidContext(), AppDatabase::class.java, "crew")
+        Room.databaseBuilder(androidContext(), AppDatabase::class.java, "db")
+            .fallbackToDestructiveMigration()
             .build()
     }
 }
