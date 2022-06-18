@@ -14,8 +14,7 @@ class CrewRetrofitDataSource(
                 status = apiCrewMember.status,
                 agency = apiCrewMember.agency,
                 wikipedia = apiCrewMember.wikipedia,
-                //numberOfLaunches = apiCrewMember.launches.size,
-                numberOfLaunches = 1,
+                numberOfLaunches = apiCrewMember.launches.size,
                 imageUrl = apiCrewMember.image
             )
         }

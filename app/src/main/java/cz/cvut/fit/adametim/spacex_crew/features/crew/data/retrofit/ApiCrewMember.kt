@@ -9,6 +9,6 @@ data class ApiCrewMember(
     val status: String,
     val agency: String,
     val wikipedia: String,
-    //val launches: List<String>,
+    val launches: List<String>,
     val image: String
 )

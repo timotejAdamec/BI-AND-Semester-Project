@@ -20,10 +20,6 @@ class MainActivity : AppCompatActivity() {
         R.id.company_fragment
     )
 
-    /*private val destinationIdsWithoutBottomNavigation = setOf(
-        R.id.crew_member_fragment
-    )*/
-
     private val appBarConfiguration = AppBarConfiguration(topLevelDestinationIds = topLevelDestinationIds)
 
     override fun onCreate(savedInstanceState: Bundle?) {
