@@ -1,6 +1,7 @@
 package cz.cvut.fit.adametim.spacex_crew
 
 import android.app.Application
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import cz.cvut.fit.adametim.spacex_crew.features.company.di.companyModule
 import cz.cvut.fit.adametim.spacex_crew.features.crew.di.crewModule
 import cz.cvut.fit.adametim.spacex_crew.shared.di.sharedModule
@@ -14,6 +15,10 @@ class App : Application() {
         startKoin {
             androidContext(this@App)
             modules(sharedModule + crewModule + companyModule)
+        }
+
+        if (!BuildConfig.DEBUG) {
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
         }
     }
 }
