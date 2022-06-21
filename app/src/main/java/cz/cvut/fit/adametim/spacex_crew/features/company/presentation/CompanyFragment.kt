@@ -2,7 +2,6 @@ package cz.cvut.fit.adametim.spacex_crew.features.company.presentation
 
 import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Paint
 import android.net.Uri
 import android.os.Bundle
@@ -12,8 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -94,12 +91,12 @@ class CompanyFragment : Fragment() {
     private fun applyButtonOnClick() {
         if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
             AlertDialog.Builder(requireContext())
-                .setTitle("Call recruiter permission")
-                .setMessage("In order to connect you with the recruiter we need to make a phone call")
-                .setPositiveButton("OK") { _, _ ->
+                .setTitle(getString(R.string.call_permission_title))
+                .setMessage(getString(R.string.call_permission_msg))
+                .setPositiveButton(getString(R.string.ok)) { _, _ ->
                     requestPermission()
                 }
-                .setNegativeButton("NO", null)
+                .setNegativeButton(getString(R.string.no_upper_case), null)
                 .show()
         } else {
             requestPermission()
