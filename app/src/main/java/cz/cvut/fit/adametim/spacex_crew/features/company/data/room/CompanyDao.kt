@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 abstract class CompanyDao {
+
     @Query("SELECT * FROM company ORDER BY id DESC LIMIT 1")
     abstract fun getCompanyStream(): Flow<DatabaseCompany>
 

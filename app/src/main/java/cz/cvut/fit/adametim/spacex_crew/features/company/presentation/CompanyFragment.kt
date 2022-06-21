@@ -1,5 +1,6 @@
 package cz.cvut.fit.adametim.spacex_crew.features.company.presentation
 
+import android.graphics.Paint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -44,21 +45,31 @@ class CompanyFragment : Fragment() {
     }
 
     private fun FragmentCompanyBinding.bind() {
-        // TODO bind all texts etc
-        /*viewLifecycleOwner.lifecycleScope.launch {
+        generalSubtitle.paintFlags = generalSubtitle.paintFlags or Paint.UNDERLINE_TEXT_FLAG
+        statsSubtitle.paintFlags = statsSubtitle.paintFlags or Paint.UNDERLINE_TEXT_FLAG
+
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.companyStateStream.collect { state ->
-                progressBar.isVisible = state is CrewState.Loading
+                progressBar.isVisible = state is CompanyState.Loading
                 when (state) {
-                    is CrewState.Loading -> {}
-                    is CrewState.Loaded -> {
-                        adapter.submitList(state.crew)
-                        pagerCrewMembers.setCurrentItem(3, false)
-                        pagerCrewMembers.setCurrentItem(0, true)
+                    is CompanyState.Loading -> {}
+                    is CompanyState.Loaded -> {
+                        txtSummary.text = state.company.summary
+                        txtName.text = state.company.name
+                        txtFounder.text = state.company.founder
+                        txtWebsite.text = state.company.website
+                        txtHqAddress.text = state.company.hqAddress + ","
+                        txtHqCity.text = state.company.hqCity + ","
+                        txtHqState.text = state.company.hqState
+                        txtEmployees.text = state.company.employees.toString()
+                        txtVehicles.text = state.company.vehicles.toString()
+                        txtNumberOfLaunchSites.text = state.company.numberOfLaunchSites.toString()
+                        txtNumberOfTestSites.text = state.company.numberOfTestSites.toString()
                     }
-                    is CrewState.Error -> {
+                    is CompanyState.Error -> {
                         Snackbar.make(
                             binding.root,
-                            R.string.crew_error_loading_msg,
+                            getString(R.string.company_error_loading_msg),
                             Snackbar.LENGTH_SHORT)
                             .show()
                         Log.e(this.javaClass.simpleName,
@@ -66,7 +77,7 @@ class CompanyFragment : Fragment() {
                     }
                 }
             }
-        }*/
+        }
     }
 
     override fun onDestroyView() {

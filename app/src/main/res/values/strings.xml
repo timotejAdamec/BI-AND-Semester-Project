@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">SpaceX Crew</string>
     <string name="crew">Crew</string>
     <string name="spacex">SpaceX</string>
@@ -13,4 +13,20 @@
     <string name="alive">Alive</string>
     <string name="nasa">NASA</string>
     <string name="apply_to_crew">APPLY TO CREW</string>
+    <string name="headquarters">Headquarters</string>
+    <string name="dummy_address">Linkin Park St 255/16</string>
+    <string name="company_error_loading_msg">Error loading the company details</string>
+    <string name="general">General</string>
+    <string name="dummy_summary" tools:ignore="Typos">Some a little bit longer dummy text. Bla bla bla bla bla bla bla bla.</string>
+    <string name="name">Name</string>
+    <string name="founder">Founder</string>
+    <string name="elon_musk">Elon Musk</string>
+    <string name="dummy_website">www.spacex.com</string>
+    <string name="website">Website</string>
+    <string name="stats">Stats</string>
+    <string name="employees">Employees</string>
+    <string name="dummy_number">3086</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="number_of_launch_sites">Number of launch sites</string>
+    <string name="number_of_test_sites">Number of test sites</string>
 </resources>

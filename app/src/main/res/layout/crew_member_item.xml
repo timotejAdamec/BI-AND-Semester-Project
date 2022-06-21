@@ -17,6 +17,13 @@
         android:paddingTop="@dimen/medium_space"
         android:paddingBottom="@dimen/large_space">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
         <TextView
             android:id="@+id/txt_name"
             style="@style/TextAppearance.SpaceXCrew.Headline1"
@@ -52,13 +59,6 @@
             android:layout_marginEnd="@dimen/large_space"
             app:dividerColor="@color/primary_color"
             app:layout_constraintTop_toBottomOf="@id/img_avatar" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/center_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="180dp" />
 
         <TextView
             android:id="@+id/agency_subtitle"

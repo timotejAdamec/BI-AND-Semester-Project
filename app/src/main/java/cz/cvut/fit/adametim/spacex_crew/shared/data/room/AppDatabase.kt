@@ -7,7 +7,7 @@ import cz.cvut.fit.adametim.spacex_crew.features.company.data.room.DatabaseCompa
 import cz.cvut.fit.adametim.spacex_crew.features.crew.data.room.CrewDao
 import cz.cvut.fit.adametim.spacex_crew.features.crew.data.room.DatabaseCrewMember
 
-@Database(entities = [DatabaseCrewMember::class, DatabaseCompany::class], version = 2)
+@Database(entities = [DatabaseCrewMember::class, DatabaseCompany::class], version = 3)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getCrewDao(): CrewDao

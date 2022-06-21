@@ -2,15 +2,268 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/very_small_space"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/subtle_primary_color"
+        app:trackColor="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_summary"
+        style="@style/TextAppearance.SpaceXCrew.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/summary_divider"
+        app:layout_constraintEnd_toEndOf="@id/summary_divider"
+        tools:text="@string/dummy_summary"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/summary_divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_space"
+        android:layout_marginEnd="@dimen/medium_space"
+        android:layout_marginTop="@dimen/medium_space"
+        app:dividerColor="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_summary"/>
+
+    <TextView
+        android:id="@+id/general_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        android:text="@string/general"
+        app:layout_constraintTop_toBottomOf="@id/summary_divider"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"/>
+
+    <TextView
+        android:id="@+id/name_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        android:text="@string/name"
+        app:layout_constraintTop_toBottomOf="@id/general_subtitle"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"/>
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/name_subtitle"
+        tools:text="@string/spacex" />
+
+    <TextView
+        android:id="@+id/founder_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/founder"
+        app:layout_constraintTop_toBottomOf="@id/name_subtitle"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"/>
+
+    <TextView
+        android:id="@+id/txt_founder"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/founder_subtitle"
+        tools:text="@string/elon_musk" />
+
+    <TextView
+        android:id="@+id/website_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/website"
+        app:layout_constraintTop_toBottomOf="@id/founder_subtitle"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"/>
+
+    <TextView
+        android:id="@+id/txt_website"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/website_subtitle"
+        tools:text="@string/dummy_website" />
+
+    <TextView
+        android:id="@+id/headquarters_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/headquarters"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/website_subtitle" />
+
+    <TextView
+        android:id="@+id/txt_hq_address"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/headquarters_subtitle"
+        tools:text="@string/dummy_address" />
+
+    <TextView
+        android:id="@+id/txt_hq_city"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/very_small_space"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_hq_address"
+        tools:text="@string/dummy_address" />
+
+    <TextView
+        android:id="@+id/txt_hq_state"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/very_small_space"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_hq_city"
+        tools:text="@string/dummy_address" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/headquarters_divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_space"
+        android:layout_marginEnd="@dimen/medium_space"
+        android:layout_marginTop="@dimen/medium_space"
+        app:dividerColor="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_hq_state"
+        />
+
+    <TextView
+        android:id="@+id/stats_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/stats"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/headquarters_divider" />
+
+    <TextView
+        android:id="@+id/employees_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        android:text="@string/employees"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/stats_subtitle" />
+
+    <TextView
+        android:id="@+id/txt_employees"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/employees_subtitle"
+        tools:text="@string/dummy_number" />
+
+    <TextView
+        android:id="@+id/vehicles_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/vehicles"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/employees_subtitle" />
+
+    <TextView
+        android:id="@+id/txt_vehicles"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/vehicles_subtitle"
+        tools:text="@string/dummy_number" />
+
+    <TextView
+        android:id="@+id/number_of_launch_sites_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/number_of_launch_sites"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/vehicles_subtitle" />
+
+    <TextView
+        android:id="@+id/txt_number_of_launch_sites"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/number_of_launch_sites_subtitle"
+        tools:text="@string/dummy_number" />
+
+    <TextView
+        android:id="@+id/number_of_test_sites_subtitle"
+        style="@style/TextAppearance.SpaceXCrew.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_space"
+        android:text="@string/number_of_test_sites"
+        app:layout_constraintStart_toStartOf="@id/headquarters_divider"
+        app:layout_constraintTop_toBottomOf="@id/number_of_launch_sites_subtitle" />
+
+    <TextView
+        android:id="@+id/txt_number_of_test_sites"
+        style="@style/TextAppearance.SpaceXCrew.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="@id/number_of_test_sites_subtitle"
+        tools:text="@string/dummy_number" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/apply_button"
         style="@style/Widget.SpaceXCrew.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium_space"
+        android:layout_marginHorizontal="@dimen/medium_space"
+        android:layout_marginVertical="@dimen/small_space"
         android:text="@string/apply_to_crew"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:icon="@drawable/ic_baseline_local_phone_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
