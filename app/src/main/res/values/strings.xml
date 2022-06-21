@@ -29,4 +29,5 @@
     <string name="vehicles">Vehicles</string>
     <string name="number_of_launch_sites">Number of launch sites</string>
     <string name="number_of_test_sites">Number of test sites</string>
+    <string name="call_permission_denied_msg">We cannot connect you with the recruiter</string>
 </resources>
