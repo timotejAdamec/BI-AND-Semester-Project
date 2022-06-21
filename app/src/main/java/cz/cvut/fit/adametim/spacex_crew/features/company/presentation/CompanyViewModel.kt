@@ -20,16 +20,24 @@ class CompanyViewModel(
 
     init {
         viewModelScope.launch {
-            companyRepository.getCompanyStream().collect() { company ->
-                _companyStateStream.value = CompanyState.Loaded(company = company)
-            }
+            loadCompany()
         }
         viewModelScope.launch {
-            try {
-                companyRepository.fetchCompany()
-            } catch (t: Throwable) {
-                _companyStateStream.value = CompanyState.Error(throwable = t)
-            }
+            fetchCompany()
+        }
+    }
+
+    private suspend fun loadCompany() {
+        companyRepository.getCompanyStream().collect { company ->
+            _companyStateStream.value = CompanyState.Loaded(company = company)
+        }
+    }
+
+    private suspend fun fetchCompany() {
+        try {
+            companyRepository.fetchCompany()
+        } catch (t: Throwable) {
+            _companyStateStream.value = CompanyState.Error(throwable = t)
         }
     }
 

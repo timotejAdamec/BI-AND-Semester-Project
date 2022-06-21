@@ -20,16 +20,24 @@ class CrewViewModel(
 
     init {
         viewModelScope.launch {
-            crewRepository.getCrewStream().collect() { crew ->
-                _crewStateStream.value = CrewState.Loaded(crew = crew)
-            }
+            loadCrew()
         }
         viewModelScope.launch {
-            try {
-                crewRepository.fetchCrew()
-            } catch (t: Throwable) {
-                _crewStateStream.value = CrewState.Error(throwable = t)
-            }
+            fetchCrew()
+        }
+    }
+
+    private suspend fun loadCrew() {
+        crewRepository.getCrewStream().collect { crew ->
+            _crewStateStream.value = CrewState.Loaded(crew = crew)
+        }
+    }
+
+    private suspend fun fetchCrew() {
+        try {
+            crewRepository.fetchCrew()
+        } catch (t: Throwable) {
+            _crewStateStream.value = CrewState.Error(throwable = t)
         }
     }
 
