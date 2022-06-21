@@ -10,20 +10,6 @@ class CompanyRetrofitDataSource(
 
     override suspend fun fetchCompany(): Company {
         val apiCompany = companyApiDescription.fetchCompany()
-        return Company(
-            id = apiCompany.id,
-            hqAddress = apiCompany.headquarters.address,
-            hqCity = apiCompany.headquarters.city,
-            hqState = apiCompany.headquarters.state,
-            website = apiCompany.links.website,
-            name = apiCompany.name,
-            founder = apiCompany.founder,
-            founded = apiCompany.founded,
-            employees = apiCompany.employees,
-            vehicles = apiCompany.vehicles,
-            numberOfLaunchSites = apiCompany.launch_sites,
-            numberOfTestSites = apiCompany.test_sites,
-            summary = apiCompany.summary
-        )
+        return ApiCompanyMapper.getCompany(apiCompany)
     }
 }

@@ -13,39 +13,11 @@ class CompanyRoomDataSource(
 
     override fun getCompanyStream(): Flow<Company> {
         return companyDao.getCompanyStream().filterNotNull().map { databaseCompany ->
-            Company(
-                id = databaseCompany.id,
-                hqAddress = databaseCompany.hqAddress,
-                hqCity = databaseCompany.hqCity,
-                hqState = databaseCompany.hqState,
-                website = databaseCompany.website,
-                name = databaseCompany.name,
-                founder = databaseCompany.founder,
-                founded = databaseCompany.founded,
-                employees = databaseCompany.employees,
-                vehicles = databaseCompany.vehicles,
-                numberOfLaunchSites = databaseCompany.numberOfLaunchSites,
-                numberOfTestSites = databaseCompany.numberOfTestSites,
-                summary = databaseCompany.summary
-            )
+            DatabaseCompanyMapper.getCompany(databaseCompany)
         }
     }
 
     override suspend fun synchronizeCompany(company: Company) {
-        companyDao.synchronizeCompany(DatabaseCompany(
-            id = company.id,
-            hqAddress = company.hqAddress,
-            hqCity = company.hqCity,
-            hqState = company.hqState,
-            website = company.website,
-            name = company.name,
-            founder = company.founder,
-            founded = company.founded,
-            employees = company.employees,
-            vehicles = company.vehicles,
-            numberOfLaunchSites = company.numberOfLaunchSites,
-            numberOfTestSites = company.numberOfTestSites,
-            summary = company.summary
-        ))
+        companyDao.synchronizeCompany(DatabaseCompanyMapper.getDatabaseCompany(company))
     }
 }

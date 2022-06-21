@@ -13,44 +13,20 @@ class CrewRoomDataSource(
     override fun getCrewStream(): Flow<List<CrewMember>> {
         return crewDao.getCrewStream().filterNotNull().map { databaseCrew ->
             databaseCrew.map { databaseCrewMember ->
-                CrewMember(
-                    id = databaseCrewMember.id,
-                    name = databaseCrewMember.name,
-                    status = databaseCrewMember.status,
-                    agency = databaseCrewMember.agency,
-                    wikipedia = databaseCrewMember.wikipedia,
-                    numberOfLaunches = databaseCrewMember.numberOfLaunches,
-                    imageUrl = databaseCrewMember.imageUrl
-                )
+                DatabaseCrewMemberMapper.getCrewMember(databaseCrewMember)
             }
         }
     }
 
     override fun getCrewMemberStream(id: String): Flow<CrewMember> {
         return crewDao.getCrewMemberStream(id).filterNotNull().map { databaseCrewMember ->
-            CrewMember(
-                id = databaseCrewMember.id,
-                name = databaseCrewMember.name,
-                status = databaseCrewMember.status,
-                agency = databaseCrewMember.agency,
-                wikipedia = databaseCrewMember.wikipedia,
-                numberOfLaunches = databaseCrewMember.numberOfLaunches,
-                imageUrl = databaseCrewMember.imageUrl
-            )
+            DatabaseCrewMemberMapper.getCrewMember(databaseCrewMember)
         }
     }
 
     override suspend fun synchronizeCrew(crew: List<CrewMember>) {
         val databaseCrew = crew.map { crewMember ->
-            DatabaseCrewMember(
-                id = crewMember.id,
-                name = crewMember.name,
-                status = crewMember.status,
-                agency = crewMember.agency,
-                wikipedia = crewMember.wikipedia,
-                numberOfLaunches = crewMember.numberOfLaunches,
-                imageUrl = crewMember.imageUrl
-            )
+            DatabaseCrewMemberMapper.getDatabaseCrewMember(crewMember)
         }
         crewDao.synchronizeCrew(databaseCrew)
     }
