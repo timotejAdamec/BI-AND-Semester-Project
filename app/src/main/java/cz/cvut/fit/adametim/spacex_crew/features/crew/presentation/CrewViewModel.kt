@@ -7,7 +7,6 @@ import cz.cvut.fit.adametim.spacex_crew.features.crew.data.CrewRepository
 import cz.cvut.fit.adametim.spacex_crew.features.crew.domain.CrewMember
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 

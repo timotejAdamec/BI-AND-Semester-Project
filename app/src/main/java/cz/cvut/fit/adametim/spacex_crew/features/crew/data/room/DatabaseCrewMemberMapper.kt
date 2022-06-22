@@ -1,6 +1,5 @@
 package cz.cvut.fit.adametim.spacex_crew.features.crew.data.room
 
-import cz.cvut.fit.adametim.spacex_crew.features.crew.data.retrofit.ApiCrewMember
 import cz.cvut.fit.adametim.spacex_crew.features.crew.domain.CrewMember
 
 class DatabaseCrewMemberMapper {

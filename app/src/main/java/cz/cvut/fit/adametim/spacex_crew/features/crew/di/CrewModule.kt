@@ -11,7 +11,6 @@ import cz.cvut.fit.adametim.spacex_crew.shared.data.room.AppDatabase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
-import retrofit2.create
 
 val crewModule = module {
 

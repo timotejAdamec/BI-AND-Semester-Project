@@ -1,6 +1,5 @@
 package cz.cvut.fit.adametim.spacex_crew.features.company.data.room
 
-import android.util.Log
 import cz.cvut.fit.adametim.spacex_crew.features.company.data.CompanyDatabaseDataSource
 import cz.cvut.fit.adametim.spacex_crew.features.company.domain.Company
 import kotlinx.coroutines.flow.Flow

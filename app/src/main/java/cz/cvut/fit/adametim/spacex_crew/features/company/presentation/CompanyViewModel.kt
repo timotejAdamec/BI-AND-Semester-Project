@@ -1,6 +1,5 @@
 package cz.cvut.fit.adametim.spacex_crew.features.company.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -8,7 +7,6 @@ import cz.cvut.fit.adametim.spacex_crew.features.company.data.CompanyRepository
 import cz.cvut.fit.adametim.spacex_crew.features.company.domain.Company
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
 
 class CompanyViewModel(
