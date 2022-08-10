@@ -39,18 +39,6 @@ class CrewViewModel(
             _crewStateStream.value = CrewState.Error(throwable = t)
         }
     }
-
-    suspend fun getCrewMember(id: String): CrewMember {
-        return crewRepository.getCrewMemberStream(id).first()
-    }
-
-    @Suppress("UNCHECKED_CAST")
-    class Factory(private val crewRepository: CrewRepository) : ViewModelProvider.Factory {
-
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return CrewViewModel(crewRepository) as T
-        }
-    }
 }
 
 sealed class CrewState {

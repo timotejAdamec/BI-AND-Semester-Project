@@ -38,14 +38,6 @@ class CompanyViewModel(
             _companyStateStream.value = CompanyState.Error(throwable = t)
         }
     }
-
-    @Suppress("UNCHECKED_CAST")
-    class Factory(private val companyRepository: CompanyRepository) : ViewModelProvider.Factory {
-
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return CompanyViewModel(companyRepository) as T
-        }
-    }
 }
 
 sealed class CompanyState {
