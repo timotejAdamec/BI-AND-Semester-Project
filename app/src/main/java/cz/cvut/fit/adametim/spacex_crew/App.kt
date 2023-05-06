@@ -1,6 +1,7 @@
 package cz.cvut.fit.adametim.spacex_crew
 
 import android.app.Application
+import com.google.firebase.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import cz.cvut.fit.adametim.spacex_crew.features.company.di.companyModule
 import cz.cvut.fit.adametim.spacex_crew.features.crew.di.crewModule
